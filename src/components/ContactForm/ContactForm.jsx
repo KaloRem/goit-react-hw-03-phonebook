@@ -10,7 +10,7 @@ export class ContactForm extends Component {
   onHandleSubmit = e => {
     e.preventDefault();
     this.props.onAddContact({ ...this.state });
-    this.setState({ name: '', number: '' });
+    this.setState({ name: this.state.name, number: this.state.number });
   };
 
   saveName = e => {
